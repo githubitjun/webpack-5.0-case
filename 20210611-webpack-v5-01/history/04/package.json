@@ -1,0 +1,32 @@
+{
+  "name": "20210611-webpack-v5-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "dev": "webpack server",
+    "server":"node server.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-loader": "^3.0.3",
+    "lodash": "^4.17.21",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "xml-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack-dev-middleware": "^5.0.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-hot-middleware": "^2.25.0"
+  }
+}
