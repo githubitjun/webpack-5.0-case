@@ -1,0 +1,27 @@
+{
+  "name": "20210616-webpack-v5-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack server",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "xml-loader": "^1.2.1"
+  }
+}

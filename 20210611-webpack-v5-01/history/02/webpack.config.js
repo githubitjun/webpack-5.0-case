@@ -2,9 +2,9 @@
  * @Author: 九天
  * @Date: 2021-06-11 10:45:12
  * @LastEditors: 九天
- * @LastEditTime: 2021-06-11 15:09:16
+ * @LastEditTime: 2021-06-16 16:31:56
  * @Description: 
- * @FilePath: \20210611-webpack-v5-01\webpack.config.js
+ * @FilePath: \20210611-webpack\20210611-webpack-v5-01\history\02\webpack.config.js
  */
 const path = require('path')
 
@@ -25,7 +25,7 @@ module.exports = {
         filename:'[name].[contenthash].js',//  给文件创建出唯一的 hash 值
         path:path.resolve(__dirname,'dist'),
         clean: true, // 清理 dist 文件夹
-        publicPath:'/',//
+        publicPath:'/',// 为图片、文件等外部资源指定一个自定义的公共路径。
     },
     devServer:{
         // npm install --save-dev webpack-dev-server  // 开启一个web 服务
@@ -37,6 +37,7 @@ module.exports = {
     },
     plugins:[
         // 指定打包的时候html模板
+        // npm install --save-dev html-webpack-plugin
         new HtmlWebpackPlugin({
             title:'管理输出', // 打包后的 html 文件的 title, 但是当指定了 template 属性的时候就不会生效
             filename:'index.html', // 打包后的文件名
