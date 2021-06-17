@@ -2,13 +2,15 @@
  * @Author: 九天
  * @Date: 2021-06-16 14:37:23
  * @LastEditors: 九天
- * @LastEditTime: 2021-06-16 16:49:15
+ * @LastEditTime: 2021-06-17 17:41:52
  * @Description: 
- * @FilePath: \20210611-webpack\20210616-webpack-v5-02\src\index.js
+ * @FilePath: \20210616-webpack-v5-02\src\index.js
  */
 
 // import './style.css'
 import '@/style.css'
+import '@/style1.css'
+
 
 
 import dataJson from './data.json' 
@@ -35,7 +37,26 @@ console.log(dataJson);
     return element;
   }
   
-  document.body.appendChild(component());
+  // document.body.appendChild(component());
 
 import DataXml  from './data.xml'
 console.log(DataXml)
+
+
+let [a,b] = [1,2]
+console.log(a,b);
+
+
+
+// 渲染 vue 文件
+import Vue from 'vue';
+import Index from './index.vue'
+var vm = new Vue({
+    el: '#app',
+    render: function (createElement) {
+     // 引入的是运行时的Vue，所以需要用render导入返回的内容就会放在el控制的这个区域里
+        return createElement(Index);
+    }
+    // 简写形式
+    // render:c=>c(app)  
+})
