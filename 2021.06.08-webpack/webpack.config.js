@@ -9,6 +9,9 @@ let MiniCssExtractPlugin = require('mini-css-extract-plugin');// 这个插件抽
 
 let OptimizeCss = require('optimize-css-assets-webpack-plugin');// 压缩css
 let UglifyjsPlugin = require('uglifyjs-webpack-plugin');//压缩js 
+
+const { VueLoaderPlugin } = require('vue-loader'); //// 配置解析 .vue 结尾的文件 链接地: https://vue-loader.vuejs.org/zh/guide/#vue-cli
+
 module.exports = {
     optimization: { // 优化项
         minimizer :[
@@ -34,6 +37,7 @@ module.exports = {
         filename: 'bundle.[fullhash:8].js', //打包后的文件名
         path: path.resolve(__dirname, 'dist'),// 打包后的路径  路径必须是一个绝对路径
         // publicPath:'http://www.baidu.com', // 这个会给每个 打包后的文件加上 基准路径 这样是加载不出来的  随便写了个地址
+        clean:true,// 清理dist 文件夹
     },
     plugins: [ // 放所有webpack 插件的数组
         new HtmlWebpackPlugin({
@@ -48,7 +52,8 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'main.css',// 抽离的css 的文件名称
-        })
+        }),
+        new VueLoaderPlugin(), // // 配置解析 .vue 结尾的文件
     ],
     resolveLoader:{
         modules:['node_modules',path.resolve(__dirname,'loader')]
@@ -60,26 +65,31 @@ module.exports = {
     module: {
         // 模块 loader 的配置
         rules: [
+            {
+                // 配置解析 .vue 结尾的文件
+                test: /\.vue$/,
+                loader: 'vue-loader'
+            },
             // loader 的顺序 pre + noraml + inline(行内) + post
             // 默认情况下 loader 的顺序是 从右往左 , 从下往上执行, 所以执行顺序是 3 2 1 
             // 但是可以通过 设置enforce 属性来改变 就变成了 1 2 3
-             { 
-                // 自定义loader 写法二   
-                test:/\.js$/,
-                use:'loader1',
-                enforce:'pre',
-            },
-            {
+            //  { 
+            //     // 自定义loader 写法二   
+            //     test:/\.js$/,
+            //     use:'loader1',
+            //     enforce:'pre',
+            // },
+            // {
                 
-                test:/\.js$/,
-                use:'loader2'
-            },
-            {
+            //     test:/\.js$/,
+            //     use:'loader2'
+            // },
+            // {
                 
-                test:/\.js$/,
-                use:'loader3',
-                enforce:'post',
-            },
+            //     test:/\.js$/,
+            //     use:'loader3',
+            //     enforce:'post',
+            // },
             // {
             //       // 自定义loader 写法一    
             //     test:/\.js$/,

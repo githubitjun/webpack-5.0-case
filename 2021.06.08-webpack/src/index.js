@@ -1,3 +1,11 @@
+/*
+ * @Author: 九天
+ * @Date: 2021-06-17 09:02:08
+ * @LastEditors: 九天
+ * @LastEditTime: 2021-06-17 17:12:33
+ * @Description: 
+ * @FilePath: \2021.06.08-webpack\src\index.js
+ */
 
 
 // console.log('hello zf')
@@ -35,3 +43,5 @@ import logo from './01.jpg'
 let image = new Image()
 image.src =logo 
 document.body.appendChild(image)
+
+import Index from './index.vue'

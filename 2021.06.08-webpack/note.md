@@ -1,5 +1,13 @@
+<!--
+ * @Author: 九天
+ * @Date: 2021-06-17 09:02:08
+ * @LastEditors: 九天
+ * @LastEditTime: 2021-06-17 14:46:22
+ * @Description: 
+ * @FilePath: \2021.06.08-webpack\note.md
+-->
 ## webpack 安装
--安装本地的webpack 
+### 安装本地的webpack 
     webpack webpack-cli -D  (-D 的意思是说只在开发环境需要)
 
     01.默认打包命令  npx webpack 
