@@ -1,0 +1,49 @@
+{
+  "name": "2021.06.08-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "expose-loader": "^3.0.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "html-withimg-loader": "^0.1.16",
+    "less": "^4.1.1",
+    "less-loader": "^9.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.0",
+    "postcss-loader": "^5.3.0",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ],
+  "dependencies": {
+    "html-withimg-loader": "^0.1.16"
+  }
+}

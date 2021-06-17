@@ -1,0 +1,23 @@
+body {
+    color: red;
+}
+body {
+    background-color: pink;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+
+img {
+   height: 300px;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    background: url(assets/4b9c6630e0c399897e27112f456665a0.jpg)
+}
