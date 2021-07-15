@@ -9,6 +9,28 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-3[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-3[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\nconsole.log('vue 文件');\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  data: function data() {\n    return {\n      msg: 'Hello world!'\n    };\n  }\n});\n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.vue?./node_modules/babel-loader/lib/index.js??clonedRuleSet-3%5B0%5D.rules%5B0%5D.use%5B0%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _01_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./01.jpg */ \"./src/01.jpg\");\n/* harmony import */ var _01_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_01_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue */ \"./src/index.vue\");\n/*\r\n * @Author: 九天\r\n * @Date: 2021-06-17 09:02:08\r\n * @LastEditors: 九天\r\n * @LastEditTime: 2021-06-17 17:12:33\r\n * @Description: \r\n * @FilePath: \\2021.06.08-webpack\\src\\index.js\r\n */\n// console.log('hello zf')\n// const a = require('./a.js')\n// require('./index.css');\n// require('./index1.less');\n// let fn = ()=>{\n//     console.log('箭头函数')\n// }\n// fn();\n// // @log 类的装饰器\n// @log\n// class A {\n//      constructor(){\n//          this.a = 1\n//      }\n// }\n// function log(target){\n//     console.log(target)\n// }\n// let b = new A()\n// console.log(b.a);\n// import $ from 'expose-loader?$!jquery';\n// // console.log($)\n// console.log(window.$);\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\n\n\nvar image = new Image();\nimage.src = (_01_jpg__WEBPACK_IMPORTED_MODULE_0___default());\ndocument.body.appendChild(image);\n\n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.js?");
+
+/***/ }),
+
 /***/ "./src/index.css":
 /*!***********************!*\
   !*** ./src/index.css ***!
@@ -52,14 +74,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ind
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************/
+/***/ "./src/index.vue?vue&type=script&lang=js&":
+/*!************************************************!*\
+  !*** ./src/index.vue?vue&type=script&lang=js& ***!
+  \************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\r\nconsole.log('vue 文件');\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  data () {\r\n    return {\r\n      msg: 'Hello world!'\r\n    }\r\n  }\r\n});\r\n\n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.vue?./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_3_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../node_modules/babel-loader/lib/index.js??clonedRuleSet-3[0].rules[0].use[0]!../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js??clonedRuleSet-3[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=script&lang=js&\");\n /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_3_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); \n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.vue?");
 
 /***/ }),
 
@@ -71,17 +93,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../node_modules/mini-css-extract-plugin/dist/loader.js!../node_modules/css-loader/dist/cjs.js!../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=style&index=0&lang=css& */ \"./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=style&index=0&lang=css&\");\n\n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.vue?");
-
-/***/ }),
-
-/***/ "./src/index.vue?vue&type=script&lang=js&":
-/*!************************************************!*\
-  !*** ./src/index.vue?vue&type=script&lang=js& ***!
-  \************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../node_modules/vue-loader/lib/index.js??vue-loader-options!./index.vue?vue&type=script&lang=js& */ \"./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/index.vue?vue&type=script&lang=js&\");\n /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); \n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.vue?");
 
 /***/ }),
 
@@ -115,17 +126,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* binding */ normalizeComponent; }\n/* harmony export */ });\n/* globals __VUE_SSR_CONTEXT__ */\n\n// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).\n// This module is a runtime utility for cleaner component module output and will\n// be included in the final webpack user bundle.\n\nfunction normalizeComponent (\n  scriptExports,\n  render,\n  staticRenderFns,\n  functionalTemplate,\n  injectStyles,\n  scopeId,\n  moduleIdentifier, /* server only */\n  shadowMode /* vue-cli only */\n) {\n  // Vue.extend constructor export interop\n  var options = typeof scriptExports === 'function'\n    ? scriptExports.options\n    : scriptExports\n\n  // render functions\n  if (render) {\n    options.render = render\n    options.staticRenderFns = staticRenderFns\n    options._compiled = true\n  }\n\n  // functional template\n  if (functionalTemplate) {\n    options.functional = true\n  }\n\n  // scopedId\n  if (scopeId) {\n    options._scopeId = 'data-v-' + scopeId\n  }\n\n  var hook\n  if (moduleIdentifier) { // server build\n    hook = function (context) {\n      // 2.3 injection\n      context =\n        context || // cached call\n        (this.$vnode && this.$vnode.ssrContext) || // stateful\n        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional\n      // 2.2 with runInNewContext: true\n      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {\n        context = __VUE_SSR_CONTEXT__\n      }\n      // inject component styles\n      if (injectStyles) {\n        injectStyles.call(this, context)\n      }\n      // register component module identifier for async chunk inferrence\n      if (context && context._registeredComponents) {\n        context._registeredComponents.add(moduleIdentifier)\n      }\n    }\n    // used by ssr in case component is cached and beforeCreate\n    // never gets called\n    options._ssrRegister = hook\n  } else if (injectStyles) {\n    hook = shadowMode\n      ? function () {\n        injectStyles.call(\n          this,\n          (options.functional ? this.parent : this).$root.$options.shadowRoot\n        )\n      }\n      : injectStyles\n  }\n\n  if (hook) {\n    if (options.functional) {\n      // for template-only hot-reload because in that case the render fn doesn't\n      // go through the normalizer\n      options._injectStyles = hook\n      // register for functional component in vue file\n      var originalRender = options.render\n      options.render = function renderWithStyleInjection (h, context) {\n        hook.call(context)\n        return originalRender(h, context)\n      }\n    } else {\n      // inject component registration as beforeCreate hook\n      var existing = options.beforeCreate\n      options.beforeCreate = existing\n        ? [].concat(existing, hook)\n        : [hook]\n    }\n  }\n\n  return {\n    exports: scriptExports,\n    options: options\n  }\n}\n\n\n//# sourceURL=webpack://2021.06.08-webpack/./node_modules/vue-loader/lib/runtime/componentNormalizer.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _01_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./01.jpg */ \"./src/01.jpg\");\n/* harmony import */ var _01_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_01_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue */ \"./src/index.vue\");\n/*\r\n * @Author: 九天\r\n * @Date: 2021-06-17 09:02:08\r\n * @LastEditors: 九天\r\n * @LastEditTime: 2021-06-17 17:12:33\r\n * @Description: \r\n * @FilePath: \\2021.06.08-webpack\\src\\index.js\r\n */\r\n\r\n\r\n// console.log('hello zf')\r\n// const a = require('./a.js')\r\n// require('./index.css');\r\n// require('./index1.less');\r\n\r\n// let fn = ()=>{\r\n//     console.log('箭头函数')\r\n// }\r\n// fn();\r\n\r\n// // @log 类的装饰器\r\n// @log\r\n// class A {\r\n//      constructor(){\r\n//          this.a = 1\r\n//      }\r\n    \r\n// }\r\n// function log(target){\r\n//     console.log(target)\r\n// }\r\n\r\n// let b = new A()\r\n// console.log(b.a);\r\n\r\n// import $ from 'expose-loader?$!jquery';\r\n// // console.log($)\r\n// console.log(window.$);\r\n\r\n\r\n__webpack_require__(/*! ./index.css */ \"./src/index.css\");\r\n\r\nlet image = new Image()\r\nimage.src =(_01_jpg__WEBPACK_IMPORTED_MODULE_0___default()) \r\ndocument.body.appendChild(image)\r\n\r\n;\n\n//# sourceURL=webpack://2021.06.08-webpack/./src/index.js?");
 
 /***/ })
 

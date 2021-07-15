@@ -2,9 +2,9 @@
  * @Author: 九天
  * @Date: 2021-06-16 14:34:37
  * @LastEditors: 九天
- * @LastEditTime: 2021-06-17 17:48:11
+ * @LastEditTime: 2021-06-18 14:37:42
  * @Description: 
- * @FilePath: \20210616-webpack-v5-02\webpack.config.js
+ * @FilePath: \20210611-webpack\20210616-webpack-v5-02\webpack.config.js
  */
 const path =  require('path')
 
@@ -27,7 +27,7 @@ const { VueLoaderPlugin } = require('vue-loader'); // vue 结尾的文件 链接
     04. {
         test: /\.vue$/,
         loader: 'vue-loader'
-    }, // 而且这个 loader 要配置在 rules 数组的第一项里面, 踩坑: 我一开始 写在最rules 数组的最后面,一直报错, 一直报vue-loader 找不到
+    }, // 而且这个 loader 要配置在 rules 数组的第一项里面, 踩坑: 我一开始 写在最 rules 数组的最后面,一直报错, 一直报vue-loader 找不到
  */
 
 
