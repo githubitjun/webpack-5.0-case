@@ -1,0 +1,149 @@
+/* ----------------------------------------------------主题色------------------------------------------------------ */
+/* ----------------------------------------------------菜单栏------------------------------------------------------ */
+/* ----------------------------------------------------列表区域------------------------------------------------------ */
+/* ----------------------------------------------------按钮颜色------------------------------------------------------ */
+/** 多系统公用样式 ---------------------------------====== Start ======-------------------------------- **/
+.ui-nav {
+  background: #002140;
+  /* 菜单栏 */
+}
+.ui-nav::-webkit-scrollbar {
+  width: 0;
+}
+.ui-nav .ui-nav-bar {
+  background: #002140;
+}
+.ui-nav .ui-system-info {
+  background: #002140;
+  border-top: 1px #283c50 solid;
+  border-bottom: 1px #283c50 solid;
+}
+.ui-nav .ui-system-info i {
+  color: #5196fe;
+}
+.ui-nav .el-menu {
+  background: #002140;
+}
+.ui-nav .el-menu .el-menu--inline {
+  background: #1f262f;
+}
+.ui-nav .el-menu .default {
+  color: #a2aab8;
+}
+.ui-nav .el-menu .active {
+  color: #5196fe;
+}
+.ui-nav .el-menu .el-submenu__title {
+  color: #a2aab8;
+  border-bottom-color: #283c50;
+}
+.ui-nav .el-menu .el-submenu .el-menu-item.is-active {
+  color: #5196fe;
+}
+.ui-nav .el-menu .el-submenu__title:hover,
+.ui-nav .el-menu .el-submenu__title:focus {
+  background: #002140;
+}
+.ui-nav .el-menu .menu-item-dot {
+  border: 0.5px dashed #7284a8;
+}
+.ui-nav .el-menu .menu-item-dot .normal-dot {
+  background-color: #7284a8;
+}
+.ui-nav .el-menu .menu-item-dot .active-dot {
+  background-color: #5196fe;
+}
+.ui-content .ui-multiple_tab-item {
+  color: #5196fe;
+}
+.ui-content .ui-multiple_tab-item span.ui-link {
+  color: #5196fe;
+}
+.ui-content .ui-multiple_tab-item span.ui-link + i {
+  background: #5196fe;
+}
+.ui-content .ui-main-module .ui-main-search-btn .el-button--primary,
+.ui-content .ui-main-module .ui-filter-btn .el-button--primary {
+  background: #5196fe;
+  border-color: #5196fe;
+}
+.ui-content .ui-main-module .ui-main-search-btn .el-button--default:focus,
+.ui-content .ui-main-module .ui-filter-btn .el-button--default:focus,
+.ui-content .ui-main-module .ui-main-search-btn .el-button--default:hover,
+.ui-content .ui-main-module .ui-filter-btn .el-button--default:hover {
+  border-color: #5196fe;
+}
+.ui-content .ui-main-module .ui-main-search-btn .el-button--primary:hover,
+.ui-content .ui-main-module .ui-filter-btn .el-button--primary:hover {
+  background: #74abfe;
+  border-color: #74abfe;
+}
+.ui-content .ui-main-module .ui-main-search-btn .el-button--primary:focus,
+.ui-content .ui-main-module .ui-filter-btn .el-button--primary:focus {
+  background: #5196fe;
+}
+.ui-content .ui-main-module .ui-fn-module .el-button--primary {
+  border-color: #5196fe;
+}
+.ui-content .ui-main-module .ui-fn-module .el-button--primary:hover,
+.ui-content .ui-main-module .ui-fn-module .el-button--primary:active {
+  background: #5196fe;
+}
+.ui-content .ui-main-module .ui-fn-module .ui-option_b {
+  display: flex;
+}
+.ui-content .ui-main-module .ui-fn-module .ui-option_b .ui-option_button {
+  flex: 9;
+  padding: 10px 0 10px 10px;
+  background: #fff;
+}
+.ui-content .ui-main-module .ui-fn-module .ui-option_b .ui-option_button .el-button--small {
+  margin: 0 10px 5px 0;
+  font-weight: 600;
+}
+.ui-content .ui-main-module .ui-fn-module .ui-option_b .ui-right-option_sorts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #fff;
+}
+.ui-content .ui-main-module .ui-fn-module .ui-left-operate-module {
+  flex: auto;
+}
+.ui-content .ui-main-module .ui-main-module-table:not(.ui-noHover) .el-table--enable-row-hover .el-table__body tr:hover td {
+  background: #ecf6fe;
+  border-top: 1px solid #80bcf3;
+  border-bottom: 1px solid #80bcf3;
+}
+.ui-content .ui-main-module .ui-main-module-table:not(.ui-noHover) .el-table__body tr.hover-row > td {
+  background: #ecf6fe;
+  border-top: 1px solid #80bcf3;
+  border-bottom: 1px solid #80bcf3;
+}
+.ui-content .ui-main-module .ui-main-module-table:not(.ui-noHover) .el-table__body tr:hover > td:first-child {
+  border-left: 2px #5196fe solid;
+}
+.ui-content .ui-main-module .ui-main-module-table:not(.ui-noHover) .el-table--enable-row-hover .el-table__body tr:hover > td:first-child {
+  border-left: 2px #5196fe solid;
+}
+.ui-content .ui-main-module .ui-main-module-table:not(.ui-noHover) .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+.ui-content .ui-main-module .ui-main-module-table:not(.ui-noHover) .el-table__body tr.current-row > td {
+  background: #e8f5ff;
+}
+.ui-content .ui-main-module .ui-main-module-table.ui-noHover .el-table--enable-row-hover .el-table__body tr:hover td {
+  background: #fff;
+}
+.ui-content .ui-main-module .ui-main-module-table.ui-noHover .el-table__body tr.hover-row > td {
+  background: #fff;
+}
+.ui-content .ui-main-module .ui-main-module-table.ui-noHover .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+.ui-content .ui-main-module .ui-main-module-table.ui-noHover .el-table__body tr.current-row > td {
+  background: #fff;
+}
+.ui-content .ui-tabs_box .el-tabs__item.is-active {
+  background: #5196fe;
+}
+.ui-content .ui-tabs_box .el-tabs__item:hover {
+  color: #5196fe;
+}
+/** 多系统公用样式 ---------------------------------====== End ======-------------------------------- **/

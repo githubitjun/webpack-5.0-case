@@ -1,0 +1,312 @@
+
+// 导航栏高度
+@base-nav-height: 50px;
+
+//弹框表头背景色
+@base-dialog-bgColor: #f3f3f3;
+
+// 操作区域颜色
+@base-main-areaBg: #ffffff;
+
+@base-link-color: #3388ff;
+
+
+/** 多系统公用样式 ---------------------------------====== Start ======-------------------------------- **/
+
+//菜单栏样式
+.ui-nav {
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    /* 菜单栏 */
+    .el-menu {
+
+        //二级菜单
+        .el-submenu .el-menu-item {
+            color: #cacdcf;
+        }
+        .el-submenu .el-menu-item:hover {
+            color: #fff;
+        }
+        .el-submenu__title {
+            border-bottom: 1px solid;
+        }
+    }
+}
+
+//内容模块
+.ui-content {
+    .ui-main-module {
+        li.ui-search-layout_inp {
+            .el-checkbox__label {
+                font-size: 12px;
+            }
+        }
+        .el-input--small {
+            font-size: 12px !important;
+        }
+        .ui-search-area {
+            background: @base-main-areaBg;
+            // border: 1px solid #e6e6e6;
+            border-top: 0 none;
+        }
+        //查询区域按钮
+        .ui-main-search-btn,
+        .ui-filter-btn {
+            .el-button {
+                width: 48px;
+                height: 32px;
+                padding: 0;
+                border-radius: 4px;
+            }
+            .el-button--primary {
+                color: #fff;
+            }
+            .el-button--default:focus,
+            .el-button--default:hover {
+                color: #333;
+                background-color: #fff;
+            }
+        }
+        //筛选按钮
+        .ui-filter-btn {
+            box-sizing: border-box;
+            margin: 5px 0 0 100px;
+            text-align: left;
+            .el-button--small {
+                padding: 9px;
+                i {
+                    margin-right: 5px !important;
+                    font-size: 12px !important;
+                }
+            }
+            .el-button--text {
+                margin-left: 0 !important;
+            }
+        }
+        //操作按钮
+        .ui-fn-module {
+            .el-button--primary {
+                // background: none;
+                padding: 8px 11px;
+                margin-right: 10px;
+                color: #fff;
+                &:hover,
+                &:active {
+                    color: #fff;
+                }
+            }
+        }
+        //列表区域
+        .ui-main-module-table {
+            .el-table th,
+            .el-table td {
+                padding: 0;
+            }
+            .el-table .cell {
+                padding: 8px;
+            }
+            .el-table--enable-row-hover .el-table__body tr:hover + tr td {
+                //border-top: 0 solid transparent;
+            }
+            .el-table__body tr > td:first-child .el-checkbox__input {
+                position: relative;
+                left: -1.5px;
+            }
+
+            //操作按钮间隔
+            .el-button--small:not(:first-child) span {
+                display: inline-block;
+                height: 11px;
+                padding-left: 10px;
+                border-left: 1px #38f solid;
+            }
+            .el-button--small.is-disabled:not(:first-child) span {
+                border-left: 1px #999 solid;
+            }
+            .el-button + .el-button {
+                margin-left: 6px;
+            }
+            //状态圆圈
+            .ui-state_dot {
+                position: relative;
+                top: -2px;
+                left: 0;
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+// element Popover  hover完整内容弹出框 设置最大高度
+.popover-add-class {
+    max-height: 200px !important;
+    overflow: auto;
+    word-break: break-all;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+// ------- element Popover 弹出框 样式 start---------------
+.el-popover {
+    padding: 10px;
+    font-size: 12px;
+    color: #000;
+    cursor: pointer;
+    &::-webkit-scrollbar {
+        /* 隐藏滚轮 */
+        display: none !important;
+    }
+}
+.pointer {
+    cursor: pointer;
+}
+// 超过一行出现省略号
+.ellipsis1 {
+    display: block;
+    max-height: 14px;
+    overflow: hidden;
+    line-height: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+// 超过两行出现省略号
+.ellipsis2 {
+    display: -webkit-box;
+    max-height: 28px;
+    overflow: hidden;
+    line-height: 14px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+// 超过三行出现省略号
+.ellipsis3 {
+    display: -webkit-box;
+    max-height: 42px;
+    overflow: hidden;
+    line-height: 14px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+// 超过四行出现省略号
+.ellipsis4 {
+    display: -webkit-box;
+    max-height: 56px;
+    overflow: hidden;
+    line-height: 14px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+// ------- element Popover 弹出框 样式 end---------------
+
+// element  多选框TAG字段
+.el-tag--info {
+    position: relative;
+    display: inline-block;
+    width: auto !important;
+    max-width: 100px;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .el-tag__close {
+        position: absolute;
+        top: 3px !important;
+        right: 0 !important;
+    }
+}
+// 表格基本样式
+.commontablestyle {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    td {
+        padding: 7px 10px;
+        border-top: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+    }
+
+    // 灰白相间，灰色格子文字居中
+    &.commontablestylea {
+        td:nth-child(2n-1) {
+            text-align: center;
+            background: #fafafa;
+        }
+    }
+}
+
+// Table 加载时 牛头gif loading
+/deep/ .el-loading-spinner {
+    top: 40%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: url('../image/loading.gif') no-repeat;
+    background-position: center center;
+    background-size: 90% 90%;
+    transform: translateX(-50%);
+}
+/deep/ .el-loading-text {
+    position: absolute;
+    bottom: -16px;
+    font-size: 12px !important;
+}
+
+// 列表设置最大高度
+.ui-max-height {
+    max-height: 110px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        display: block;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+// 点击列颜色
+.ui-link {
+    color: @base-link-color;
+    cursor: pointer;
+}
+
+/** 多系统公用样式 ---------------------------------====== End ======-------------------------------- **/
+// 查询条件日期范围的输入框的样式
+.el-range-editor--small .el-range-input {
+    font-size: 12px;
+}
+.ui-main-module .ui-main-module-search li {
+    width: 15%;
+    min-width: 204px;
+    margin-right: 15px;
+}
+//状态字体背景颜色
+.orangeColor {
+    background: #fd9727;
+}
+.blueColor {
+    background: #38f;
+}
+.greenColor {
+    background: #8dc444;
+}
+.redColor {
+    background: #f33;
+}
+.grayColor {
+    background: #ccc;
+}

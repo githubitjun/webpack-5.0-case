@@ -1,0 +1,22 @@
+{
+  "name": "20210413-koa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^1.2.2",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0",
+    "multiparty": "^4.2.2",
+    "nodemon": "^2.0.12",
+    "spark-md5": "^3.0.1"
+  }
+}

@@ -1,0 +1,221 @@
+/* ----------------------------------------------------主题色------------------------------------------------------ */
+@primary-color: #5196fe; //#75B1FF,
+
+/* ----------------------------------------------------菜单栏------------------------------------------------------ */
+
+//背景色
+// @menu-color: #2b323d; //#283036,
+@menu-color: #002140; //#283036,
+
+//菜单展开背景色
+@menu-collapse_color: #1f262f; //#161a1e,
+
+//字体颜色
+@menu-txt_color: #a2aab8; //#98a2ac,
+
+//圆点颜色
+@menu-dash_color: #7284a8; //#7284a8
+
+//线条颜色
+@menu-line_color: #283c50; //#303c49,
+
+/* ----------------------------------------------------列表区域------------------------------------------------------ */
+
+//列表鼠标hover
+@table-hover_color: #ecf6fe; //#f3faff,
+
+//边框线颜色
+@table-hover_border_color: #80bcf3; //#b0cef9,
+
+//高亮行背景色
+@table-focus_color: #e8f5ff;
+
+/* ----------------------------------------------------按钮颜色------------------------------------------------------ */
+@button-primary: #5196fe; //#75B1FF, #8dc1fe
+@button-hover_color: #74abfe;
+// @button-primary: #fff; //#75B1FF, #8dc1fe
+// @button-hover_color: #66b1ff;
+
+// 主题配置  end
+
+// 导航栏高度
+@base-nav-height: 50px;
+//弹框表头背景色
+@base-dialog-bgColor: #f3f3f3;
+
+/** 多系统公用样式 ---------------------------------====== Start ======-------------------------------- **/
+
+//菜单栏样式
+.ui-nav {
+    background: @menu-color;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    .ui-nav-bar {
+        background: @menu-color;
+    }
+    .ui-system-info {
+        background: @menu-color;
+        border-top: 1px @menu-line_color solid;
+        border-bottom: 1px @menu-line_color solid;
+        i {
+            color: @primary-color;
+        }
+    }
+
+    /* 菜单栏 */
+    .el-menu {
+        background: @menu-color;
+        .el-menu--inline {
+            background: @menu-collapse_color;
+        }
+        .default {
+            color: @menu-txt_color;
+        }
+        .active {
+            color: @primary-color;
+        }
+        //一级菜单
+        .el-submenu__title {
+            color: @menu-txt_color;
+            border-bottom-color: @menu-line_color;
+        }
+        .el-submenu .el-menu-item.is-active {
+            color: @primary-color;
+        }
+        .el-submenu__title:hover,
+        .el-submenu__title:focus {
+            background: @menu-color;
+        }
+        //圆点
+        .menu-item-dot {
+            border: 0.5px dashed @menu-dash_color;
+            .normal-dot {
+                background-color: @menu-dash_color;
+            }
+            .active-dot {
+                background-color: @primary-color;
+            }
+        }
+    }
+}
+
+//内容模块
+.ui-content {
+    //路由模块
+    .ui-multiple_tab-item {
+        color: @primary-color;
+        span.ui-link {
+            color: @primary-color;
+        }
+        span.ui-link + i {
+            background: @primary-color;
+        }
+    }
+    .ui-main-module {
+        //查询区域按钮
+        .ui-main-search-btn,
+        .ui-filter-btn {
+            .el-button--primary {
+                background: @button-primary;
+                border-color: @button-primary;
+            }
+            .el-button--default:focus,
+            .el-button--default:hover {
+                border-color: @button-primary;
+            }
+            .el-button--primary:hover {
+                background: @button-hover_color;
+                border-color: @button-hover_color;
+            }
+            .el-button--primary:focus {
+                background: @button-primary;
+            }
+        }
+
+        //操作按钮
+        .ui-fn-module {
+            .el-button--primary {
+                // color: @button-primary;
+                border-color: @button-primary;
+                &:hover,
+                &:active {
+                    background: @button-primary;
+                }
+            }
+            .ui-option_b {
+                display: flex;
+                // padding-top: 15px;
+                .ui-option_button {
+                    flex: 9;
+                    padding: 10px 0 10px 10px;
+                    background: #fff;
+                    .el-button--small {
+                        margin: 0 10px 5px 0;
+                        font-weight: 600;
+                    }
+                }
+                // 排序
+                .ui-right-option_sorts {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    background: #fff;
+                    // flex: 1;
+                }
+            }
+            .ui-left-operate-module {
+                flex: auto;
+            }
+        }
+        //列表区域
+        .ui-main-module-table:not(.ui-noHover) {
+            .el-table--enable-row-hover .el-table__body tr:hover td {
+                background: @table-hover_color;
+                border-top: 1px solid @table-hover_border_color;
+                border-bottom: 1px solid @table-hover_border_color;
+            }
+            .el-table__body tr.hover-row > td {
+                background: @table-hover_color;
+                border-top: 1px solid @table-hover_border_color;
+                border-bottom: 1px solid @table-hover_border_color;
+            }
+            .el-table__body tr:hover > td:first-child {
+                border-left: 2px @primary-color solid;
+            }
+            .el-table--enable-row-hover .el-table__body tr:hover > td:first-child {
+                border-left: 2px @primary-color solid;
+            }
+
+            //高亮行样式
+            .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+            .el-table__body tr.current-row > td {
+                background: @table-focus_color;
+            }
+        }
+        .ui-main-module-table.ui-noHover {
+            .el-table--enable-row-hover .el-table__body tr:hover td {
+                background: #fff;
+            }
+            .el-table__body tr.hover-row > td {
+                background: #fff;
+            }
+
+            //高亮行样式
+            .el-table--striped .el-table__body tr.el-table__row--striped.current-row td,
+            .el-table__body tr.current-row > td {
+                background: #fff;
+            }
+        }
+    }
+    .ui-tabs_box {
+        .el-tabs__item.is-active {
+            background: @primary-color;
+        }
+        .el-tabs__item:hover {
+            color: @primary-color;
+        }
+    }
+}
+
+/** 多系统公用样式 ---------------------------------====== End ======-------------------------------- **/

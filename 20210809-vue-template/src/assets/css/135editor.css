@@ -1,0 +1,10 @@
+
+._135editor {border:0 none;padding: 0px;z-index:0;position: relative !important;}
+
+._135editor .draghandle{position: absolute;background-color:rgba(200,200,200,0.8);color:#333;cursor: move;top:-30px;right:-5px;padding: 3px 5px;font-size:12px;}
+
+.view .active-135item{position: relative !important;}
+
+._135editor img {
+    max-width: 100%;
+}
