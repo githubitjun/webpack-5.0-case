@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "experimentalDecorators": true, // 用于指定是否启用实验性的装饰器特性
+        "strictFunctionTypes": true,
+    },
+}
