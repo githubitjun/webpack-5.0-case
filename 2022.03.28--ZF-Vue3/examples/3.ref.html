@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="../node_modules/@vue/reactivity/dist/reactivity.global.js"></script>
+
+    <script>
+        let {ref,shallowRef,effect } = VueReactivity
+
+        let name = ref('张三'); // ref 将一个普通的类型 转化成一个对象 这个对象中有value属性 指向原来的值
+        // console.log(name);
+        // let date = ref({age:20})
+        // console.log(date.value.age);
+        effect(()=>{
+            app.innerHTML = name.value;
+        })
+        setTimeout(()=> {
+            name.value = '李四';
+        },1000)
+    </script>
+</body>
+</html>

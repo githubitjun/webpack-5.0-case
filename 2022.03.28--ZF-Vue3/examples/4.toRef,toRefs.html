@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="../node_modules/@vue/reactivity/dist/reactivity.global.js"></script>
+
+    <script>
+        let {ref,shallowRef,effect,reactive,toRef,toRefs } = VueReactivity
+
+        let date =reactive({name:'张三',age:20,address:'北京'}); 
+        let age = toRef(date,'age');
+        let { name,address } = toRefs(date)
+        effect(()=>{
+            app.innerHTML = date.name + date.age + age.value + address.value;
+        })
+        setTimeout(()=> {
+            date.name = '李四';
+            age.value = 30;
+            address.value = '广州';
+        },1000)
+
+        /**
+         * reactive 就是响应式api
+         * ref 普通值只能用ref
+         * 想要解构reactive --> toRefs  解构其中一个属性使用toRef
+         * effect 函数 track: 收集依赖  trigger: 触发effect更新
+        */
+    </script>
+</body>
+</html>
