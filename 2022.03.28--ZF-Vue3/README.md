@@ -19,5 +19,5 @@
         "paths": {
         "@vue/*":[
                 "packages/*/src"
-            ]
+            ] 
         },
