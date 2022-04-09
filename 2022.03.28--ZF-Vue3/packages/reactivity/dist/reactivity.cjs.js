@@ -1,6 +1,7 @@
 const isObject = (obj) => typeof obj === 'object' && typeof obj !== null;
 const extend = Object.assign;
 const isArray = Array.isArray;
+const isFunction = (value) => typeof value == 'function';
 const isIntegerKey = (key) => parseInt(key) + '' === key;
 let hasOwnProperty = Object.prototype.hasOwnProperty;
 const hasOwn = (target, key) => hasOwnProperty.call(target, key);
@@ -19,11 +20,11 @@ let activeEffect; // 存储当前的 effect
 const effectStack = []; // 不能存放重复的 effect
 function createReactiveEffect(fn, options) {
     const effect = function reactiveEffect() {
-        if (!effectStack.includes(effect)) {
+        if (!effectStack.includes(effect)) { // 保证effect 没有加入到effectStack中
             try {
                 effectStack.push(effect);
                 activeEffect = effect;
-                fn();
+                return fn(); // 函数执行时会取值  会执行get方法
             }
             finally {
                 effectStack.pop();
@@ -55,7 +56,7 @@ function track(target, type, key) {
     if (!dep.has(activeEffect)) {
         dep.add(activeEffect);
     }
-    console.log(targetMap);
+    // console.log(targetMap);
 }
 // activeEffect 依赖收集就是收集effect -->  属性对应  effect 要存放的数据结构
 // wekMap 存放对象属性 target => new Map 
@@ -107,7 +108,15 @@ function trigger(target, type, key, newValue, oldValue) {
         }
     }
     // console.log('effects', effects);
-    effects.forEach((effect) => effect());
+    // effects.forEach((effect: any) => effect());
+    effects.forEach((effect) => {
+        if (effect.options.scheduler) {
+            effect.options.scheduler(effect);
+        }
+        else {
+            effect();
+        }
+    });
 }
 
 // 实现 new Proxy(target,handler)
@@ -280,5 +289,54 @@ function toRefs(object) {
     return ret;
 }
 
-export { effect, reactive, readonly, ref, shallowReactive, shallowReadonly, shallowRef, toRef, toRefs };
+class ComputedRefImpl {
+    getter;
+    setter;
+    _dirty = true; // 默认取值时不要用缓存
+    _value;
+    effect;
+    constructor(getter, setter) {
+        this.getter = getter;
+        this.setter = setter;
+        this.effect = effect(getter, {
+            lazy: true,
+            scheduler: () => {
+                if (!this._dirty) {
+                    this._dirty = true;
+                    trigger(this, 1 /* SET */, 'value');
+                }
+            }
+        });
+    }
+    get value() {
+        if (this._dirty) {
+            this._value = this.effect(); // 会将用户的返回值返回
+            this._dirty = false;
+        }
+        track(this, 0 /* GET */, 'value');
+        return this._value;
+    }
+    set value(newValue) {
+        this.setter(newValue);
+    }
+}
+// vue2 和 vue3 computed 原理是不一样的
+function computed(getterOrOptions) {
+    let getter;
+    let setter;
+    // 先判断传递的参数是不是一个函数
+    if (isFunction(getterOrOptions)) {
+        getter = getterOrOptions;
+        setter = () => {
+            console.warn('computed value must be readonly');
+        };
+    }
+    else {
+        getter = getterOrOptions.get;
+        setter = getterOrOptions.set;
+    }
+    return new ComputedRefImpl(getter, setter);
+}
+
+export { computed, effect, reactive, readonly, ref, shallowReactive, shallowReadonly, shallowRef, toRef, toRefs };
 //# sourceMappingURL=reactivity.cjs.js.map

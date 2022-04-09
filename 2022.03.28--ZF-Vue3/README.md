@@ -18,6 +18,6 @@
         "baseUrl": "./",   
         "paths": {
         "@vue/*":[
-                "packages/*/src"
-            ]  
+            "packages/*/src"
+        ]
         },

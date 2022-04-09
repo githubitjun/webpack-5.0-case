@@ -16,11 +16,11 @@ let activeEffect; // 存储当前的 effect
 const effectStack = []; // 不能存放重复的 effect
 function createReactiveEffect(fn, options) {
     const effect = function reactiveEffect() {
-        if (!effectStack.includes(effect)) {
+        if (!effectStack.includes(effect)) { // 保证effect 没有加入到effectStack中
             try {
                 effectStack.push(effect);
                 activeEffect = effect;
-                fn();
+                return  fn(); // 函数执行时会取值  会执行get方法
             } finally {
                 effectStack.pop();
                 activeEffect = effectStack[effectStack.length - 1]
@@ -53,7 +53,7 @@ export function track(target, type, key) {
     if (!dep.has(activeEffect)) {
         dep.add(activeEffect)
     }
-    console.log(targetMap);
+    // console.log(targetMap);
 
 }
 
@@ -118,5 +118,12 @@ export function trigger(target, type, key?, newValue?, oldValue?) {
 
     // console.log('effects', effects);
 
-    effects.forEach((effect: any) => effect());
+    // effects.forEach((effect: any) => effect());
+    effects.forEach((effect: any) => {
+        if(effect.options.scheduler){
+            effect.options.scheduler(effect);
+        }else {
+            effect();
+        }
+    });
 }
